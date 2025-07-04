@@ -10,7 +10,7 @@ services:
       - .:/app
     # O comando abaixo sobrescreve o CMD do Dockerfile para garantir que o reload funcione bem com o volume.
     # Se o seu Dockerfile já tem o --reload, esta linha é opcional, mas explícita.
-    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+    # command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 
 
 
