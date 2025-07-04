@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: imersao-devops-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    # O comando abaixo sobrescreve o CMD do Dockerfile para garantir que o reload funcione bem com o volume.
+    # Se o seu Dockerfile já tem o --reload, esta linha é opcional, mas explícita.
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+
+
+
